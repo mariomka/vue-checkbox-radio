@@ -1,0 +1,27 @@
+{
+  "name": "vue-checkbox-radio-component",
+  "version": "0.1.0",
+  "description": "Checkbox and radio component for Vue.js",
+  "keywords": [
+    "checkbox",
+    "radio",
+    "vue"
+  ],
+  "main": "dist/index.js",
+  "author": {
+    "name": "Mario Juárez",
+    "email": "mario@mjp.one",
+    "url": "http://www.mjp.one"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "css-loader": "^0.28.2",
+    "vue-loader": "^12.1.0",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.0"
+  }
+}
