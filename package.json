@@ -1,6 +1,6 @@
 {
   "name": "vue-checkbox-radio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Checkbox and radio component for Vue.js",
   "keywords": [
     "checkbox",
@@ -8,8 +8,11 @@
     "vue"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --progress"
   },
   "author": {
     "name": "Mario Juárez",
