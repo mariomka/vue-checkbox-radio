@@ -1,6 +1,6 @@
 {
-  "name": "vue-checkbox-radio-component",
-  "version": "0.1.0",
+  "name": "vue-checkbox-radio",
+  "version": "0.1.1",
   "description": "Checkbox and radio component for Vue.js",
   "keywords": [
     "checkbox",
@@ -8,11 +8,19 @@
     "vue"
   ],
   "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
   "author": {
     "name": "Mario Juárez",
     "email": "mario@mjp.one",
     "url": "http://www.mjp.one"
   },
+  "repository": "mariomka/vue-checkbox-radio",
+  "bugs": {
+    "url": "https://github.com/mariomka/vue-checkbox-radio/issues"
+  },
+  "homepage": "https://github.com/mariomka/vue-checkbox-radio#readme",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.1",
