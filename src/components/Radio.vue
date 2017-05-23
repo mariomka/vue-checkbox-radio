@@ -1,31 +1,33 @@
-<style>
-    .radio-component > input {
-        opacity: 0;
-        position: absolute;
-    }
+<style lang="scss">
+    .radio-component {
+        > input {
+            opacity: 0;
+            position: absolute;
 
-    .radio-component > input + label:before {
-        content: '✓';
-        display: inline-block;
-        cursor: pointer;
-        border: 1px solid #000;
-        margin: 0;
-        padding: 0;
-        width: 16px;
-        height: 16px;
-        font-size: 14px;
-        text-align: center;
-        line-height: 1;
-        color: transparent;
-        background: #fff;
-    }
+            + label:before {
+                content: '✓';
+                display: inline-block;
+                cursor: pointer;
+                border: 1px solid #000;
+                margin: 0;
+                padding: 0;
+                width: 16px;
+                height: 16px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 1;
+                color: transparent;
+                background: #fff;
+            }
 
-    .radio-component > input:checked + label:before {
-        color: #000;
-    }
+            &:checked + label:before {
+                color: #000;
+            }
 
-    .radio-component > input:focus + label:before {
-        outline-color: #73b9ff;
+            &:focus + label:before {
+                outline-color: #73b9ff;
+            }
+        }
     }
 </style>
 

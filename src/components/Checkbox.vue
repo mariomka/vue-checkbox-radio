@@ -1,31 +1,33 @@
-<style>
-    .checkbox-component > input {
-        opacity: 0;
-        position: absolute;
-    }
+<style lang="scss">
+    .checkbox-component {
+        > input {
+            opacity: 0;
+            position: absolute;
 
-    .checkbox-component > input + label:before {
-        content: '✓';
-        display: inline-block;
-        cursor: pointer;
-        border: 1px solid #000;
-        margin: 0;
-        padding: 0;
-        width: 16px;
-        height: 16px;
-        font-size: 14px;
-        text-align: center;
-        line-height: 1;
-        color: transparent;
-        background: #fff;
-    }
+            + label:before {
+                content: '✓';
+                display: inline-block;
+                cursor: pointer;
+                border: 1px solid #000;
+                margin: 0;
+                padding: 0;
+                width: 16px;
+                height: 16px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 1;
+                color: transparent;
+                background: #fff;
+            }
 
-    .checkbox-component > input:checked + label:before {
-        color: #000;
-    }
+            &:checked + label:before {
+                color: #000;
+            }
 
-    .checkbox-component > input:focus + label:before {
-        outline-color: #73b9ff;
+            &:focus + label:before {
+                outline-color: #73b9ff;
+            }
+        }
     }
 </style>
 
