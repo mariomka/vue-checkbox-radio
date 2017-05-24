@@ -10,20 +10,14 @@
 **Checkbox**
 
 ```html
-<checkbox name="robot" value="1">
-I'm a robot
-</checkbox>
+<checkbox name="robot" value="1">I'm a robot</checkbox>
 ```
 
 **Radio**
 
 ```html
-<radio name="robot" value="1">
-I'm a robot
-</radio>
-<radio name="robot" value="0">
-I'm not a robot
-</radio>
+<radio name="robot" value="1">I'm a robot</radio>
+<radio name="robot" value="0">I'm not a robot</radio>
 ```
 
 ## Install
