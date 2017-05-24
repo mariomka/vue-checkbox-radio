@@ -1,0 +1,123 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  background-color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  padding: 1em;
+  color: #333;
+}
+
+.page {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  margin: 0 0 30px;
+  border-bottom: solid 1px #999;
+  font-weight: 100;
+}
+
+h2 {
+  margin: 20px 0;
+  border-bottom: solid 1px #ccc;
+  font-weight: 100;
+}
+
+h3 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.example {
+  margin: 0 0 30px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  pre {
+    background: #eee;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 14px;
+    overflow: scroll;
+
+    @media screen and (min-width: 900px) {
+      float: right;
+    }
+  }
+
+  .input-wrapper {
+    margin: 10px 0;
+  }
+}
+
+footer {
+  margin: 50px 0 0;
+  font-size: 14px;
+  font-weight: lighter;
+
+  a {
+    color: #aaa;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Examples
+.example-color {
+  .checkbox-component > input,
+  .radio-component > input {
+    + label > .box {
+      border-color: #4d82ff;
+      background: #4d82ff;
+    }
+
+    &:checked + label > .box {
+      color: white;
+    }
+  }
+}
+
+.example-image {
+  .checkbox-component > input,
+  .radio-component > input {
+    + label > .box:before {
+      content: '';
+    }
+
+    &:checked + label > .box {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEUA3v8A2v8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv8AcP8A3v8A3v8A2v8A2v8A2v8A1P8A1P8Azv8Azv8Ax/8Ax/8Ax/8Av/8Av/8Av/8At/8At/8At/8Arv8Arv8Arv8Arv8Arv8Arv8Apf8Apf8Apf8Apf8Apf8Apf8Apf8Apf8AnP8AnP8AnP8AnP8AnP8AnP8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ai/8Ai/8Ai/8Ai/8Ai/8Ag/8Ag/8Ag/8Ag/8AfP8AfP8AfP8Adv8Adv8Adv8AcP8AcP8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv/////qIxl/AAAATnRSTlMAAAAAAAAAAAAAAAAAAAAAPIhu+5V/gmN6OfmQDeHIm95RFlM1/rcQAWbu9Ba/qgYtxItMswZc4fUYz8sKDqTG5xxw/vw/XfyAac4FhjizOOrMAAAAAWJLR0RbdLyVNAAAAAlwSFlzAAALEgAACxIB0t1+/AAAALJJREFUGNNVxGtDwVAABuA3t50x90qIcicqKtdCpNxtte2czf//Ic7I7fnwAGcCQVycCoUvYTtxtVpdw34UkWX5Bo6DaExRlDice7eJXy4J197dH3efgiAI6Qwvm1NVNV8QQIqlh3KFkEdN056eCUG1puv6i/jKf6uLoohGk1Laancoff9wc/B0e4yxPmOfA48FkiQNvwzDGH1LW/ByP2PTnHh34LNM17O5bwf+rcXS/28Dzo8d3uFkdVkAAAAASUVORK5CYII=) no-repeat center center;
+    }
+  }
+}
+
+.example-icon {
+  .checkbox-component > input,
+  .radio-component > input {
+    + label > .box:before {
+      content: '✘';
+    }
+  }
+}

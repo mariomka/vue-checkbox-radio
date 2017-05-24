@@ -86,7 +86,7 @@ Both components emit `change` event.
 
 ## Styling
 
-Components are wrapped by `checkbox-component` and `radio-component` classes and it uses `label:before` to draw the input. Checkout [Checkbox.vue](src/components/Checkbox.vue) or [Radio.vue](src/components/Radio.vue) source for more info.
+Checkout [demo page](http://mariomka.github.io/vue-checkbox-radio).
 
 ## License
 

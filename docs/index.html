@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vue-checkbox-radio demo</title>
+    <meta name="description" content="vue-checkbox-radio docs">
+    <meta name="author" content="Mario Juárez">
+</head>
+
+<body>
+<div id="app" class="page">
+    <h1>vue-checkbox-radio demo</h1>
+
+    <div class="example">
+        <div class="input-wrapper">
+            <checkbox checked>
+                I'm a robot 🤖
+            </checkbox>
+            <checkbox>
+                I'm not a robot
+            </checkbox>
+        </div>
+
+        <div class="example">
+            <radio name="robot-1" checked>
+                I'm a robot 🤖
+            </radio>
+            <radio name="robot-1">
+                I'm not a robot
+            </radio>
+        </div>
+    </div>
+
+    <h2>Style examples</h2>
+
+    <div class="example example-color">
+        <h3>Custom colors</h3>
+
+        <pre>
+.checkbox-component > input + label > .box,
+.radio-component > input + label > .box {
+    border-color: #4d82ff;
+    background: #4d82ff;
+}
+
+.checkbox-component > input:checked + label > .box,
+.radio-component > input:checked + label > .box {
+    color: white;
+}
+        </pre>
+
+        <div class="input-wrapper">
+            <checkbox checked>
+                I'm a robot 🤖
+            </checkbox>
+            <checkbox>
+                I'm not a robot
+            </checkbox>
+        </div>
+
+        <div class="input-wrapper">
+            <radio name="robot-2" checked>
+                I'm a robot 🤖
+            </radio>
+            <radio name="robot-2">
+                I'm not a robot
+            </radio>
+        </div>
+    </div>
+
+    <div class="example example-image">
+        <h3>Custom image</h3>
+
+        <pre>
+.checkbox-component > input + label > .box:before,
+.radio-component > input + label > .box:before {
+    content: '';
+}
+
+.checkbox-component > input:checked + label > .box,
+.radio-component > input:checked + label > .box {
+    background: url(tick.png) no-repeat center center;
+}
+        </pre>
+
+        <div class="input-wrapper">
+            <checkbox checked>
+                I'm a robot 🤖
+            </checkbox>
+            <checkbox>
+                I'm not a robot
+            </checkbox>
+        </div>
+
+        <div class="input-wrapper">
+            <radio name="robot-3" checked>
+                I'm a robot 🤖
+            </radio>
+            <radio name="robot-3">
+                I'm not a robot
+            </radio>
+        </div>
+
+    </div>
+
+    <div class="example example-icon">
+        <h3>Custom icon</h3>
+
+        <pre>
+.checkbox-component > input + label > .box:before,
+.radio-component > input + label > .box:before {
+    content: '✘';
+}
+        </pre>
+
+        <div class="input-wrapper">
+            <checkbox checked>
+                I'm a robot 🤖
+            </checkbox>
+            <checkbox>
+                I'm not a robot
+            </checkbox>
+        </div>
+
+        <div class="input-wrapper">
+            <radio name="robot-4" checked>
+                I'm a robot 🤖
+            </radio>
+            <radio name="robot-4">
+                I'm not a robot
+            </radio>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://github.com/mariomka/vue-checkbox-radio">Github repo</a>
+    </footer>
+</div>
+
+<script src="build/app.js"></script>
+</body>
+</html>
