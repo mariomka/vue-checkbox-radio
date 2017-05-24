@@ -4,10 +4,8 @@
             opacity: 0;
             position: absolute;
 
-            + label:before {
-                content: '✓';
+            + label > .box {
                 display: inline-block;
-                cursor: pointer;
                 border: 1px solid #000;
                 margin: 0;
                 padding: 0;
@@ -18,13 +16,18 @@
                 line-height: 1;
                 color: transparent;
                 background: #fff;
+                user-select: none;
+
+                &:before {
+                    content: '✓';
+                }
             }
 
-            &:checked + label:before {
+            &:checked + label > .box {
                 color: #000;
             }
 
-            &:focus + label:before {
+            &:focus + label > .box {
                 outline-color: #73b9ff;
             }
         }
@@ -42,6 +45,7 @@
                :required="required"
                @change="onChange">
         <label :for="id">
+            <span class="box"></span>
             <slot></slot>
         </label>
     </div>
