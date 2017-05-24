@@ -1,6 +1,8 @@
 const path = require('path');
 
 module.exports = {
+    context: __dirname,
+
     entry: './src/index.js',
 
     output: {
@@ -8,10 +10,6 @@ module.exports = {
         filename: 'index.js',
         library: 'vue-checkbox-radio',
         libraryTarget: 'umd',
-    },
-
-    externals: {
-        vue: 'vue',
     },
 
     module: {
@@ -32,4 +30,12 @@ module.exports = {
             }
         ]
     },
+
+    resolve: {
+        extensions: ['.js', '.vue'],
+    },
+
+    externals: {
+        vue: 'vue',
+    }
 };

@@ -1,2 +1,12 @@
-export { default as Checkbox } from './components/Checkbox.vue';
-export { default as Radio } from './components/Radio.vue';
+import Checkbox from './components/Checkbox';
+import Radio from './components/Radio';
+
+export default {
+    install (Vue) {
+        console.log('eee');
+        Vue.component('checkbox', Checkbox);
+        Vue.component('radio', Radio);
+    }
+}
+
+export { Checkbox, Radio }
