@@ -79,14 +79,14 @@ Both components emit `change` event.
 
 ```html
 <checkbox
-id="input-terms"
-name="terms"
-value="1"
-className="terms"
-:change="someMethod"
-checked
-required>
-I agree to the <a href="#">terms of service</a>
+    id="input-terms"
+    name="terms"
+    value="1"
+    className="terms"
+    :change="someMethod"
+    checked
+    required>
+    I agree to the <a href="#">terms of service</a>
 </checkbox>
 ```
 
