@@ -30,17 +30,20 @@ h1 {
   margin: 0 0 30px;
   border-bottom: solid 1px #999;
   font-weight: 100;
+  font-size: 48px;
 }
 
 h2 {
   margin: 20px 0;
   border-bottom: solid 1px #ccc;
   font-weight: 100;
+  font-size:26px;
 }
 
 h3 {
   margin: 10px 0;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .example {
@@ -95,7 +98,7 @@ footer {
     }
 
     &:checked + label > .box {
-      color: white;
+      color: #fff;
     }
   }
 }
@@ -108,7 +111,7 @@ footer {
     }
 
     &:checked + label > .box {
-      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEUA3v8A2v8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv8AcP8A3v8A3v8A2v8A2v8A2v8A1P8A1P8Azv8Azv8Ax/8Ax/8Ax/8Av/8Av/8Av/8At/8At/8At/8Arv8Arv8Arv8Arv8Arv8Arv8Apf8Apf8Apf8Apf8Apf8Apf8Apf8Apf8AnP8AnP8AnP8AnP8AnP8AnP8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ai/8Ai/8Ai/8Ai/8Ai/8Ag/8Ag/8Ag/8Ag/8AfP8AfP8AfP8Adv8Adv8Adv8AcP8AcP8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv/////qIxl/AAAATnRSTlMAAAAAAAAAAAAAAAAAAAAAPIhu+5V/gmN6OfmQDeHIm95RFlM1/rcQAWbu9Ba/qgYtxItMswZc4fUYz8sKDqTG5xxw/vw/XfyAac4FhjizOOrMAAAAAWJLR0RbdLyVNAAAAAlwSFlzAAALEgAACxIB0t1+/AAAALJJREFUGNNVxGtDwVAABuA3t50x90qIcicqKtdCpNxtte2czf//Ic7I7fnwAGcCQVycCoUvYTtxtVpdw34UkWX5Bo6DaExRlDice7eJXy4J197dH3efgiAI6Qwvm1NVNV8QQIqlh3KFkEdN056eCUG1puv6i/jKf6uLoohGk1Laancoff9wc/B0e4yxPmOfA48FkiQNvwzDGH1LW/ByP2PTnHh34LNM17O5bwf+rcXS/28Dzo8d3uFkdVkAAAAASUVORK5CYII=) no-repeat center center;
+      background: url('tick.png') no-repeat center center;
     }
   }
 }

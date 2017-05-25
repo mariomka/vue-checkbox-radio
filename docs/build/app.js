@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/build";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 6);
@@ -504,7 +504,7 @@ exports.Radio = _Radio2.default;
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -518,8 +518,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./app.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./app.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./app.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/sass-loader/lib/loader.js!./app.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -10456,7 +10456,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n*,\n*:after,\n*:before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  position: relative; }\n\nbody {\n  background-color: #eee;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 1em;\n  color: #333; }\n\n.page {\n  background-color: #fff;\n  margin: 0 auto;\n  padding: 1em 1.5em;\n  width: 100%;\n  max-width: 900px; }\n\nh1 {\n  margin: 0 0 30px;\n  border-bottom: solid 1px #999;\n  font-weight: 100; }\n\nh2 {\n  margin: 20px 0;\n  border-bottom: solid 1px #ccc;\n  font-weight: 100; }\n\nh3 {\n  margin: 10px 0;\n  font-weight: 600; }\n\n.example {\n  margin: 0 0 30px; }\n  .example:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .example pre {\n    background: #eee;\n    padding: 20px;\n    width: 100%;\n    max-width: 500px;\n    font-size: 14px;\n    overflow: scroll; }\n    @media screen and (min-width: 900px) {\n      .example pre {\n        float: right; } }\n  .example .input-wrapper {\n    margin: 10px 0; }\n\nfooter {\n  margin: 50px 0 0;\n  font-size: 14px;\n  font-weight: lighter; }\n  footer a {\n    color: #aaa;\n    text-decoration: none; }\n    footer a:hover {\n      text-decoration: underline; }\n\n.example-color .checkbox-component > input + label > .box,\n.example-color .radio-component > input + label > .box {\n  border-color: #4d82ff;\n  background: #4d82ff; }\n\n.example-color .checkbox-component > input:checked + label > .box,\n.example-color .radio-component > input:checked + label > .box {\n  color: white; }\n\n.example-image .checkbox-component > input + label > .box:before,\n.example-image .radio-component > input + label > .box:before {\n  content: ''; }\n\n.example-image .checkbox-component > input:checked + label > .box,\n.example-image .radio-component > input:checked + label > .box {\n  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEUA3v8A2v8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv8AcP8A3v8A3v8A2v8A2v8A2v8A1P8A1P8Azv8Azv8Ax/8Ax/8Ax/8Av/8Av/8Av/8At/8At/8At/8Arv8Arv8Arv8Arv8Arv8Arv8Apf8Apf8Apf8Apf8Apf8Apf8Apf8Apf8AnP8AnP8AnP8AnP8AnP8AnP8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ak/8Ai/8Ai/8Ai/8Ai/8Ai/8Ag/8Ag/8Ag/8Ag/8AfP8AfP8AfP8Adv8Adv8Adv8AcP8AcP8A1P8Azv8Ax/8Av/8At/8Arv8Apf8AnP8Ak/8Ai/8Ag/8AfP8Adv/////qIxl/AAAATnRSTlMAAAAAAAAAAAAAAAAAAAAAPIhu+5V/gmN6OfmQDeHIm95RFlM1/rcQAWbu9Ba/qgYtxItMswZc4fUYz8sKDqTG5xxw/vw/XfyAac4FhjizOOrMAAAAAWJLR0RbdLyVNAAAAAlwSFlzAAALEgAACxIB0t1+/AAAALJJREFUGNNVxGtDwVAABuA3t50x90qIcicqKtdCpNxtte2czf//Ic7I7fnwAGcCQVycCoUvYTtxtVpdw34UkWX5Bo6DaExRlDice7eJXy4J197dH3efgiAI6Qwvm1NVNV8QQIqlh3KFkEdN056eCUG1puv6i/jKf6uLoohGk1Laancoff9wc/B0e4yxPmOfA48FkiQNvwzDGH1LW/ByP2PTnHh34LNM17O5bwf+rcXS/28Dzo8d3uFkdVkAAAAASUVORK5CYII=) no-repeat center center; }\n\n.example-icon .checkbox-component > input + label > .box:before,\n.example-icon .radio-component > input + label > .box:before {\n  content: '\\2718'; }\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n.checkbox-component > input {\n  opacity: 0;\n  position: absolute;\n}\n.checkbox-component > input + label > .box {\n    display: inline-block;\n    border: 1px solid #000;\n    margin: 0;\n    padding: 0;\n    width: 16px;\n    height: 16px;\n    font-size: 14px;\n    text-align: center;\n    line-height: 1;\n    color: transparent;\n    background: #fff;\n    user-select: none;\n}\n.checkbox-component > input + label > .box:before {\n      content: '\\2713';\n}\n.checkbox-component > input:checked + label > .box {\n    color: #000;\n}\n.checkbox-component > input:focus + label > .box {\n    outline-color: #73b9ff;\n}\n", ""]);
 
 // exports
 
@@ -10470,7 +10470,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n.checkbox-component > input {\n  opacity: 0;\n  position: absolute;\n}\n.checkbox-component > input + label > .box {\n    display: inline-block;\n    border: 1px solid #000;\n    margin: 0;\n    padding: 0;\n    width: 16px;\n    height: 16px;\n    font-size: 14px;\n    text-align: center;\n    line-height: 1;\n    color: transparent;\n    background: #fff;\n    user-select: none;\n}\n.checkbox-component > input + label > .box:before {\n      content: '\\2713';\n}\n.checkbox-component > input:checked + label > .box {\n    color: #000;\n}\n.checkbox-component > input:focus + label > .box {\n    outline-color: #73b9ff;\n}\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n.radio-component > input {\n  opacity: 0;\n  position: absolute;\n}\n.radio-component > input + label > .box {\n    display: inline-block;\n    border: 1px solid #000;\n    border-radius: 50%;\n    margin: 0;\n    padding: 0;\n    width: 16px;\n    height: 16px;\n    font-size: 14px;\n    text-align: center;\n    line-height: 1;\n    color: transparent;\n    background: #fff;\n    user-select: none;\n}\n.radio-component > input + label > .box:before {\n      content: '\\2713';\n}\n.radio-component > input:checked + label > .box {\n    color: #000;\n}\n.radio-component > input:focus + label > .box {\n    outline-color: #73b9ff;\n}\n", ""]);
 
 // exports
 
@@ -10484,7 +10484,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n.radio-component > input {\n  opacity: 0;\n  position: absolute;\n}\n.radio-component > input + label > .box {\n    display: inline-block;\n    border: 1px solid #000;\n    border-radius: 50%;\n    margin: 0;\n    padding: 0;\n    width: 16px;\n    height: 16px;\n    font-size: 14px;\n    text-align: center;\n    line-height: 1;\n    color: transparent;\n    background: #fff;\n    user-select: none;\n}\n.radio-component > input + label > .box:before {\n      content: '\\2713';\n}\n.radio-component > input:checked + label > .box {\n    color: #000;\n}\n.radio-component > input:focus + label > .box {\n    outline-color: #73b9ff;\n}\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n*,\n*:after,\n*:before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  position: relative; }\n\nbody {\n  background-color: #eee;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 1em;\n  color: #333; }\n\n.page {\n  background-color: #fff;\n  margin: 0 auto;\n  padding: 1em 1.5em;\n  width: 100%;\n  max-width: 900px; }\n\nh1 {\n  margin: 0 0 30px;\n  border-bottom: solid 1px #999;\n  font-weight: 100;\n  font-size: 48px; }\n\nh2 {\n  margin: 20px 0;\n  border-bottom: solid 1px #ccc;\n  font-weight: 100;\n  font-size: 26px; }\n\nh3 {\n  margin: 10px 0;\n  font-weight: 600;\n  font-size: 20px; }\n\n.example {\n  margin: 0 0 30px; }\n  .example:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .example pre {\n    background: #eee;\n    padding: 20px;\n    width: 100%;\n    max-width: 500px;\n    font-size: 14px;\n    overflow: scroll; }\n    @media screen and (min-width: 900px) {\n      .example pre {\n        float: right; } }\n  .example .input-wrapper {\n    margin: 10px 0; }\n\nfooter {\n  margin: 50px 0 0;\n  font-size: 14px;\n  font-weight: lighter; }\n  footer a {\n    color: #aaa;\n    text-decoration: none; }\n    footer a:hover {\n      text-decoration: underline; }\n\n.example-color .checkbox-component > input + label > .box,\n.example-color .radio-component > input + label > .box {\n  border-color: #4d82ff;\n  background: #4d82ff; }\n\n.example-color .checkbox-component > input:checked + label > .box,\n.example-color .radio-component > input:checked + label > .box {\n  color: #fff; }\n\n.example-image .checkbox-component > input + label > .box:before,\n.example-image .radio-component > input + label > .box:before {\n  content: ''; }\n\n.example-image .checkbox-component > input:checked + label > .box,\n.example-image .radio-component > input:checked + label > .box {\n  background: url(\"tick.png\") no-repeat center center; }\n\n.example-icon .checkbox-component > input + label > .box:before,\n.example-icon .radio-component > input + label > .box:before {\n  content: '\\2718'; }\n", ""]);
 
 // exports
 
@@ -11114,7 +11114,7 @@ if (false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -11140,7 +11140,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM

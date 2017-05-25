@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.js',
-        publicPath: '/build',
+        publicPath: '/',
     },
 
     module: {
@@ -25,7 +25,16 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader'],
+                loaders: [
+                     'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false
+                        }
+                    },
+                    'sass-loader'
+                ],
             }
         ]
     },
