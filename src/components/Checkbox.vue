@@ -41,7 +41,6 @@
                :name="name"
                :value="value"
                :class="className"
-               :checked="checked"
                :required="required"
                @change="onChange">
         <label :for="id">
@@ -83,9 +82,16 @@
         },
 
         methods: {
-            onChange: function (event) {
+            onChange(event) {
                 this.$emit('change', event);
             },
+        },
+
+        mounted() {
+            // Fix input state when on change event is use
+            if(this.checked) {
+                document.getElementById(this.id).checked = true;
+            }
         },
     };
 </script>

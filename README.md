@@ -77,7 +77,7 @@ Both components emit `change` event.
     name="terms"
     value="1"
     className="terms"
-    :change="someMethod"
+    @change="someMethod"
     checked
     required>
     I agree to the <a href="#">terms of service</a>
