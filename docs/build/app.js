@@ -10239,7 +10239,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_src2.default);
 
 new _vue2.default({
-    el: '#app'
+    el: '#app',
+
+    data: function data() {
+        return {
+            lastEventTime: ''
+        };
+    },
+
+
+    methods: {
+        onChange: function onChange() {
+            this.$emit('change');
+            this.lastEventTime = new Date();
+        }
+    }
 });
 
 __webpack_require__(4);
@@ -10254,7 +10268,6 @@ __webpack_require__(4);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-//
 //
 //
 //
@@ -10342,6 +10355,13 @@ exports.default = {
         onChange: function onChange(event) {
             this.$emit('change', event);
         }
+    },
+
+    mounted: function mounted() {
+        // Fix input state when on change event is use
+        if (this.checked) {
+            document.getElementById(this.id).checked = true;
+        }
     }
 };
 
@@ -10355,7 +10375,6 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-//
 //
 //
 //
@@ -10444,6 +10463,13 @@ exports.default = {
         onChange: function onChange(event) {
             this.$emit('change', event);
         }
+    },
+
+    mounted: function mounted() {
+        // Fix input state when on change event is use
+        if (this.checked) {
+            document.getElementById(this.id).checked = true;
+        }
     }
 };
 
@@ -10484,7 +10510,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n*,\n*:after,\n*:before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  position: relative; }\n\nbody {\n  background-color: #eee;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 1em;\n  color: #333; }\n\n.page {\n  background-color: #fff;\n  margin: 0 auto;\n  padding: 1em 1.5em;\n  width: 100%;\n  max-width: 900px; }\n\nh1 {\n  margin: 0 0 30px;\n  border-bottom: solid 1px #999;\n  font-weight: 100;\n  font-size: 48px; }\n\nh2 {\n  margin: 20px 0;\n  border-bottom: solid 1px #ccc;\n  font-weight: 100;\n  font-size: 26px; }\n\nh3 {\n  margin: 10px 0;\n  font-weight: 600;\n  font-size: 20px; }\n\n.example {\n  margin: 0 0 30px; }\n  .example:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .example pre {\n    background: #eee;\n    padding: 20px;\n    width: 100%;\n    max-width: 500px;\n    font-size: 14px;\n    overflow: scroll; }\n    @media screen and (min-width: 900px) {\n      .example pre {\n        float: right; } }\n  .example .input-wrapper {\n    margin: 10px 0; }\n\nfooter {\n  margin: 50px 0 0;\n  font-size: 14px;\n  font-weight: lighter; }\n  footer a {\n    color: #aaa;\n    text-decoration: none; }\n    footer a:hover {\n      text-decoration: underline; }\n\n.example-color .checkbox-component > input + label > .box,\n.example-color .radio-component > input + label > .box {\n  border-color: #4d82ff;\n  background: #4d82ff; }\n\n.example-color .checkbox-component > input:checked + label > .box,\n.example-color .radio-component > input:checked + label > .box {\n  color: #fff; }\n\n.example-image .checkbox-component > input + label > .box:before,\n.example-image .radio-component > input + label > .box:before {\n  content: ''; }\n\n.example-image .checkbox-component > input:checked + label > .box,\n.example-image .radio-component > input:checked + label > .box {\n  background: url(\"tick.png\") no-repeat center center; }\n\n.example-icon .checkbox-component > input + label > .box:before,\n.example-icon .radio-component > input + label > .box:before {\n  content: '\\2718'; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n*,\n*:after,\n*:before {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  position: relative; }\n\nbody {\n  background-color: #eee;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 1em;\n  color: #333; }\n\n.page {\n  background-color: #fff;\n  margin: 0 auto;\n  padding: 1em 1.5em;\n  width: 100%;\n  max-width: 900px; }\n\nh1 {\n  margin: 0 0 30px;\n  border-bottom: solid 1px #999;\n  font-weight: 100;\n  font-size: 48px; }\n\nh2 {\n  margin: 20px 0;\n  border-bottom: solid 1px #ccc;\n  font-weight: 100;\n  font-size: 26px; }\n\nh3 {\n  margin: 10px 0;\n  font-weight: 600;\n  font-size: 20px; }\n\n.example {\n  margin: 0 0 30px; }\n  .example:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .example pre {\n    background: #eee;\n    padding: 20px;\n    width: 100%;\n    max-width: 500px;\n    font-size: 14px;\n    overflow: scroll; }\n    @media screen and (min-width: 900px) {\n      .example pre {\n        float: right; } }\n  .example .input-wrapper {\n    margin: 10px 0; }\n\n.events {\n  margin-top: 20px;\n  font-size: 14px; }\n\nfooter {\n  margin: 50px 0 0;\n  font-size: 14px;\n  font-weight: lighter; }\n  footer a {\n    color: #aaa;\n    text-decoration: none; }\n    footer a:hover {\n      text-decoration: underline; }\n\n.example-color .checkbox-component > input + label > .box,\n.example-color .radio-component > input + label > .box {\n  border-color: #4d82ff;\n  background: #4d82ff; }\n\n.example-color .checkbox-component > input:checked + label > .box,\n.example-color .radio-component > input:checked + label > .box {\n  color: #fff; }\n\n.example-image .checkbox-component > input + label > .box:before,\n.example-image .radio-component > input + label > .box:before {\n  content: ''; }\n\n.example-image .checkbox-component > input:checked + label > .box,\n.example-image .radio-component > input:checked + label > .box {\n  background: url(\"tick.png\") no-repeat center center; }\n\n.example-icon .checkbox-component > input + label > .box:before,\n.example-icon .radio-component > input + label > .box:before {\n  content: '\\2718'; }\n", ""]);
 
 // exports
 
@@ -11047,8 +11073,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "required": _vm.required
     },
     domProps: {
-      "value": _vm.value,
-      "checked": _vm.checked
+      "value": _vm.value
     },
     on: {
       "change": _vm.onChange
@@ -11085,8 +11110,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "required": _vm.required
     },
     domProps: {
-      "value": _vm.value,
-      "checked": _vm.checked
+      "value": _vm.value
     },
     on: {
       "change": _vm.onChange

@@ -15,23 +15,41 @@
     <h1>vue-checkbox-radio demo</h1>
 
     <div class="example">
+        <pre>
+&#x3C;checkbox checked&#x3E;
+    I&#x27;m a robot &#x1F916;
+&#x3C;/checkbox&#x3E;
+&#x3C;checkbox&#x3E;
+    I&#x27;m not a robot
+&#x3C;/checkbox&#x3E;
+
+&#x3C;radio name=&#x22;robot&#x22; checked&#x3E;
+    I&#x27;m a robot &#x1F916;
+&#x3C;/radio&#x3E;
+&#x3C;radio name=&#x22;robot&#x22;&#x3E;
+    I&#x27;m not a robot
+&#x3C;/radio&#x3E;
+        </pre>
+
         <div class="input-wrapper">
-            <checkbox checked>
+            <checkbox @change="onChange" checked>
                 I'm a robot 🤖
             </checkbox>
-            <checkbox>
+            <checkbox @change="onChange">
                 I'm not a robot
             </checkbox>
         </div>
 
-        <div class="example">
-            <radio name="robot-1" checked>
+        <div class="input-wrapper">
+            <radio name="robot-1" @change="onChange" checked>
                 I'm a robot 🤖
             </radio>
-            <radio name="robot-1">
+            <radio name="robot-1" @change="onChange">
                 I'm not a robot
             </radio>
         </div>
+
+        <div class="events" v-if="lastEventTime"><strong>Last event time:</strong> {{ lastEventTime }}</div>
     </div>
 
     <h2>Style examples</h2>

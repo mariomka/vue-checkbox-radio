@@ -5,6 +5,19 @@ Vue.use(CheckboxRadio);
 
 new Vue({
     el: '#app',
+
+    data() {
+        return {
+            lastEventTime: ''
+        }
+    },
+
+    methods: {
+        onChange() {
+            this.$emit('change');
+            this.lastEventTime = new Date();
+        }
+    }
 });
 
 
