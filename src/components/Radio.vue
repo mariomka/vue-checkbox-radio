@@ -10,9 +10,9 @@
                 border-radius: 50%;
                 margin: 0;
                 padding: 0;
-                width: 16px;
-                height: 16px;
-                font-size: 14px;
+                width: 1em;
+                height: 1em;
+                font-size: 1em;
                 text-align: center;
                 line-height: 1;
                 color: transparent;
