@@ -12,8 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "webpack --progress",
-    "docs": "webpack --progress --config docs/webpack.config.js"
+    "build": "webpack -p --progress",
+    "docs": "webpack -p --progress --config docs/webpack.config.js"
   },
   "author": {
     "name": "Mario Juárez",
