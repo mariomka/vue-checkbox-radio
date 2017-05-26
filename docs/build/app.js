@@ -10250,7 +10250,6 @@ new _vue2.default({
 
     methods: {
         onChange: function onChange() {
-            this.$emit('change');
             this.lastEventTime = new Date();
         }
     }
@@ -10268,6 +10267,7 @@ __webpack_require__(4);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
 //
 //
 //
@@ -10351,16 +10351,20 @@ exports.default = {
         }
     },
 
-    methods: {
-        onChange: function onChange(event) {
-            this.$emit('change', event);
+    watch: {
+        checked: function checked(value) {
+            this.$refs.input.checked = value;
         }
     },
 
     mounted: function mounted() {
-        // Fix input state when on change event is use
-        if (this.checked) {
-            document.getElementById(this.id).checked = true;
+        this.$refs.input.checked = this.checked;
+    },
+
+
+    methods: {
+        onChange: function onChange(event) {
+            this.$emit('change', event);
         }
     }
 };
@@ -10375,6 +10379,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
 //
 //
 //
@@ -10459,16 +10464,21 @@ exports.default = {
         }
     },
 
-    methods: {
-        onChange: function onChange(event) {
-            this.$emit('change', event);
+    watch: {
+        checked: function checked(value) {
+            this.$refs.input.checked = value;
         }
     },
 
     mounted: function mounted() {
-        // Fix input state when on change event is use
-        if (this.checked) {
-            document.getElementById(this.id).checked = true;
+        this.$refs.input.checked = this.checked;
+    },
+
+
+    methods: {
+        onChange: function onChange(event) {
+            console.log(event.target);
+            this.$emit('change', event);
         }
     }
 };
@@ -11065,6 +11075,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "checkbox-component"
   }, [_c('input', {
+    ref: "input",
     class: _vm.className,
     attrs: {
       "type": "checkbox",
@@ -11102,6 +11113,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "radio-component"
   }, [_c('input', {
+    ref: "input",
     class: _vm.className,
     attrs: {
       "type": "radio",

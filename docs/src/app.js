@@ -8,16 +8,15 @@ new Vue({
 
     data() {
         return {
-            lastEventTime: ''
+            lastEventTime: '',
         }
     },
 
     methods: {
         onChange() {
-            this.$emit('change');
             this.lastEventTime = new Date();
-        }
-    }
+        },
+    },
 });
 
 
