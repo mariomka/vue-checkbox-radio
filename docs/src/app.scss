@@ -31,6 +31,11 @@ h1 {
   border-bottom: solid 1px #999;
   font-weight: 100;
   font-size: 48px;
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -49,27 +54,31 @@ h3 {
 .example {
   margin: 0 0 30px;
 
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  pre {
-    background: #eee;
-    padding: 20px;
-    width: 100%;
-    max-width: 500px;
-    font-size: 14px;
-    overflow: scroll;
-
-    @media screen and (min-width: 900px) {
-      float: right;
+  .example-inputs {
+    .input-wrapper {
+      margin: 10px 0;
     }
   }
 
-  .input-wrapper {
-    margin: 10px 0;
+  .example-code {
+    pre {
+      background: #eee;
+      padding: 20px;
+      width: 100%;
+      font-size: 14px;
+      overflow: scroll;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: flex;
+
+    .example-inputs {
+      width: 35%;
+    }
+    .example-code {
+      width: 65%;
+    }
   }
 }
 

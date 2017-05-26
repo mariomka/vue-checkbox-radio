@@ -12,52 +12,67 @@
 
 <body>
 <div id="app" class="page">
-    <h1>vue-checkbox-radio demo</h1>
+    <h1><a href="https://github.com/mariomka/vue-checkbox-radio">vue-checkbox-radio demo</a></h1>
 
     <div class="example">
-        <pre>
-&#x3C;checkbox checked&#x3E;
-    I&#x27;m a robot &#x1F916;
-&#x3C;/checkbox&#x3E;
-&#x3C;checkbox&#x3E;
-    I&#x27;m not a robot
-&#x3C;/checkbox&#x3E;
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox @change="onChange" name="food[]" value="pizza" checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox @change="onChange" name="food[]" value="hamburger">
+                    🍔 Hamburger
+                </checkbox>
+            </div>
 
-&#x3C;radio name=&#x22;robot&#x22; checked&#x3E;
-    I&#x27;m a robot &#x1F916;
-&#x3C;/radio&#x3E;
-&#x3C;radio name=&#x22;robot&#x22;&#x3E;
-    I&#x27;m not a robot
-&#x3C;/radio&#x3E;
-        </pre>
+            <div class="input-wrapper">
+                <radio name="robot-1" @change="onChange" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-1" @change="onChange">
+                    I'm not a robot
+                </radio>
+            </div>
 
-        <div class="input-wrapper">
-            <checkbox @change="onChange" checked>
-                I'm a robot 🤖
-            </checkbox>
-            <checkbox @change="onChange">
-                I'm not a robot
-            </checkbox>
+            <div class="events" v-if="lastEventTime"><strong>Last event time:</strong> {{ lastEventTime }}</div>
         </div>
-
-        <div class="input-wrapper">
-            <radio name="robot-1" @change="onChange" checked>
-                I'm a robot 🤖
-            </radio>
-            <radio name="robot-1" @change="onChange">
-                I'm not a robot
-            </radio>
+        <div class="example-code">
+            <pre>
+&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;pizza&#x22; checked&#x3E;
+    &#x1F355; Pizza
+&#x3C;/checkbox&#x3E;
+&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;hamburger&#x22;&#x3E;
+    &#x1F354; Hamburger
+&#x3C;/checkbox&#x3E;
+            </pre>
         </div>
-
-        <div class="events" v-if="lastEventTime"><strong>Last event time:</strong> {{ lastEventTime }}</div>
     </div>
 
     <h2>Style examples</h2>
 
+    <h3>Custom colors</h3>
     <div class="example example-color">
-        <h3>Custom colors</h3>
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
 
-        <pre>
+            <div class="input-wrapper">
+                <radio name="robot-2" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-2">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
 .checkbox-component > input + label > .box,
 .radio-component > input + label > .box {
     border-color: #4d82ff;
@@ -68,31 +83,33 @@
 .radio-component > input:checked + label > .box {
     color: #fff;
 }
-        </pre>
-
-        <div class="input-wrapper">
-            <checkbox checked>
-                I'm a robot 🤖
-            </checkbox>
-            <checkbox>
-                I'm not a robot
-            </checkbox>
-        </div>
-
-        <div class="input-wrapper">
-            <radio name="robot-2" checked>
-                I'm a robot 🤖
-            </radio>
-            <radio name="robot-2">
-                I'm not a robot
-            </radio>
+            </pre>
         </div>
     </div>
 
+    <h3>Custom image</h3>
     <div class="example example-image">
-        <h3>Custom image</h3>
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
 
-        <pre>
+            <div class="input-wrapper">
+                <radio name="robot-3" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-3">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
 .checkbox-component > input + label > .box:before,
 .radio-component > input + label > .box:before {
     content: '';
@@ -102,54 +119,38 @@
 .radio-component > input:checked + label > .box {
     background: url(tick.png) no-repeat center center;
 }
-        </pre>
-
-        <div class="input-wrapper">
-            <checkbox checked>
-                I'm a robot 🤖
-            </checkbox>
-            <checkbox>
-                I'm not a robot
-            </checkbox>
+            </pre>
         </div>
-
-        <div class="input-wrapper">
-            <radio name="robot-3" checked>
-                I'm a robot 🤖
-            </radio>
-            <radio name="robot-3">
-                I'm not a robot
-            </radio>
-        </div>
-
     </div>
 
+    <h3>Custom icon</h3>
     <div class="example example-icon">
-        <h3>Custom icon</h3>
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
 
-        <pre>
+            <div class="input-wrapper">
+                <radio name="robot-4" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-4">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
 .checkbox-component > input + label > .box:before,
 .radio-component > input + label > .box:before {
     content: '✘';
 }
-        </pre>
-
-        <div class="input-wrapper">
-            <checkbox checked>
-                I'm a robot 🤖
-            </checkbox>
-            <checkbox>
-                I'm not a robot
-            </checkbox>
-        </div>
-
-        <div class="input-wrapper">
-            <radio name="robot-4" checked>
-                I'm a robot 🤖
-            </radio>
-            <radio name="robot-4">
-                I'm not a robot
-            </radio>
+            </pre>
         </div>
     </div>
 
