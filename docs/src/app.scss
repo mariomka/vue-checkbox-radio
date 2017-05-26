@@ -61,6 +61,8 @@ h3 {
   }
 
   .example-code {
+    margin-top: 20px;
+
     pre {
       background: #eee;
       padding: 20px;
@@ -76,7 +78,9 @@ h3 {
     .example-inputs {
       width: 35%;
     }
+
     .example-code {
+      margin-top: 0;
       width: 65%;
     }
   }

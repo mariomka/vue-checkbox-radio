@@ -8,13 +8,17 @@ new Vue({
 
     data() {
         return {
-            lastEventTime: '',
+            lastEventTimeCheckbox: '',
+            lastEventTimeRadio: '',
         }
     },
 
     methods: {
-        onChange() {
-            this.lastEventTime = new Date();
+        onChangeCheckbox() {
+            this.lastEventTimeCheckbox = new Date();
+        },
+        onChangeRadio() {
+            this.lastEventTimeRadio = new Date();
         },
     },
 });
