@@ -42,7 +42,8 @@
                :value="value"
                :class="className"
                :required="required"
-               @change="onChange">
+               @change="onChange"
+               ref="input">
         <label :for="id">
             <span class="box"></span>
             <slot></slot>
@@ -81,17 +82,20 @@
             },
         },
 
+        watch: {
+            checked(value) {
+                this.$refs.input.checked = value;
+            }
+        },
+
+        mounted() {
+            this.$refs.input.checked = this.checked;
+        },
+
         methods: {
             onChange(event) {
                 this.$emit('change', event);
             },
-        },
-
-        mounted() {
-            // Fix input state when on change event is use
-            if(this.checked) {
-                document.getElementById(this.id).checked = true;
-            }
         },
     };
 </script>

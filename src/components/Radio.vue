@@ -43,7 +43,8 @@
                :value="value"
                :class="className"
                :required="required"
-               @change="onChange">
+               @change="onChange"
+               ref="input">
         <label :for="id">
             <span class="box"></span>
             <slot></slot>
@@ -58,41 +59,45 @@
                 type: String,
                 default: function () {
                     return 'radio-id-' + this._uid;
-                }
+                },
             },
             name: {
                 type: String,
-                default: null
+                default: null,
             },
             value: {
                 type: String,
-                default: null
+                default: null,
             },
             className: {
                 type: String,
-                default: null
+                default: null,
             },
             checked: {
                 type: Boolean,
-                default: false
+                default: false,
             },
             required: {
                 type: Boolean,
-                default: false
+                default: false,
             },
+        },
+
+        watch: {
+            checked(value) {
+                this.$refs.input.checked = value;
+            }
+        },
+
+        mounted() {
+            this.$refs.input.checked = this.checked;
         },
 
         methods: {
             onChange(event) {
+                console.log(event.target);
                 this.$emit('change', event);
             },
-        },
-
-        mounted() {
-            // Fix input state when on change event is use
-            if(this.checked) {
-                document.getElementById(this.id).checked = true;
-            }
         },
     }
 </script>
