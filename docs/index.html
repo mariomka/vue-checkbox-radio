@@ -177,8 +177,69 @@
         </div>
     </div>
 
+    <h3>Advanced</h3>
+    <div class="example example-advanced">
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
+
+            <div class="input-wrapper">
+                <radio name="robot-4" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-4">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
+.checkbox-component > input + label > .box,
+.radio-component > input + label > .box {
+  position: relative;
+  border: 1px solid #939393;
+  border-radius: 1em;
+  width: 1.6em;
+  background: #fff;
+  transition: background 0.2s ease-in;
+}
+
+.checkbox-component > input + label > .box:before,
+.radio-component > input + label > .box:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 1px solid #939393;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  transition: transform 0.3s ease-out;
+}
+
+.checkbox-component > input:checked + label > .box,
+.radio-component > input:checked + label > .box {
+  background: #63b65d;
+}
+
+.checkbox-component > input:checked + label > .box:before,
+.radio-component > input:checked + label > .box:before {
+  border-color: #498d47;
+  transform: translateX(0.6em);
+}
+            </pre>
+        </div>
+    </div>
+
     <footer>
-        <a href="https://github.com/mariomka/vue-checkbox-radio">Github</a>
+        <a href="https://github.com/mariomka/vue-checkbox-radio">Code on Github</a>
     </footer>
 </div>
 
