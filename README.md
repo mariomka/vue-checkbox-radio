@@ -1,23 +1,30 @@
 # vue-checkbox-radio
 > A Vue component to easily styling checkbox and radio inputs
 
-
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Latest Version on NPM](https://img.shields.io/npm/v/vue-checkbox-radio.svg?style=flat-square)](https://npmjs.com/package/vue-checkbox-radio)
+
+Check out **[demo and styling examples](http://mariomka.github.io/vue-checkbox-radio)**
 
 ## Usage
 
 **Checkbox**
 
 ```html
-<checkbox name="robot" value="1">I'm a robot</checkbox>
+<checkbox name="terms" value="1">
+	I agree to the <a href="#">terms of service</a>
+</checkbox>
 ```
 
 **Radio**
 
 ```html
-<radio name="robot" value="1">I'm a robot</radio>
-<radio name="robot" value="0">I'm not a robot</radio>
+<radio name="robot" value="1">
+	I'm a robot
+</radio>
+<radio name="robot" value="0">
+	I'm not a robot
+</radio>
 ```
 
 ## Install
@@ -58,7 +65,7 @@ Vue.component('radio', Radio);
 
 Parameter | Type | Default
 --------- | ---- | ------
-id | `string` | [checkbox/radio]-id-[element uid]
+id | `string` | (checkbox/radio)-id-(element uid)
 name | `string` | `null`
 value | `string` | `null`
 className | `string` | `null`
@@ -83,10 +90,6 @@ Both components emit `change` event.
     I agree to the <a href="#">terms of service</a>
 </checkbox>
 ```
-
-## Styling
-
-Checkout [demo page](http://mariomka.github.io/vue-checkbox-radio).
 
 ## License
 
