@@ -68,7 +68,7 @@ Parameter | Type | Default
 id | `string` | (checkbox/radio)-id-(element uid)
 name | `string` | `null`
 value | `string` | `null`
-className | `string` | `null`
+class-name | `string` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
 
