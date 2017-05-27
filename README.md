@@ -1,10 +1,14 @@
 # vue-checkbox-radio
-> A Vue component to easily styling checkbox and radio inputs
+> A Vue component to easily styling checkbox and radio inputs.
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Latest Version on NPM](https://img.shields.io/npm/v/vue-checkbox-radio.svg?style=flat-square)](https://npmjs.com/package/vue-checkbox-radio)
 
-Check out **[demo and styling examples](http://mariomka.github.io/vue-checkbox-radio)**
+## Example
+
+![demo](https://raw.githubusercontent.com/mariomka/vue-checkbox-radio/master/docs/demo.gif)
+
+Check out **[demo and styling examples](http://mariomka.github.io/vue-checkbox-radio)**.
 
 ## Usage
 
