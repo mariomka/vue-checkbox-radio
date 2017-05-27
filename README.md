@@ -87,7 +87,7 @@ Both components emit `change` event.
     id="input-terms"
     name="terms"
     value="1"
-    className="terms"
+    class-name="terms"
     @change="someMethod"
     checked
     required>
