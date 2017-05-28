@@ -8,6 +8,8 @@
 
 ![demo](https://raw.githubusercontent.com/mariomka/vue-checkbox-radio/master/docs/demo.gif)
 
+![demo](https://raw.githubusercontent.com/mariomka/vue-checkbox-radio/master/docs/demo-advanced.gif)
+
 Check out **[demo and styling examples](http://mariomka.github.io/vue-checkbox-radio)**.
 
 ## Usage
