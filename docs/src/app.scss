@@ -110,12 +110,12 @@ footer {
 .example-color {
   .checkbox-component > input,
   .radio-component > input {
-    + label > .box {
+    + label > .input-box {
       border-color: #4d82ff;
       background: #4d82ff;
     }
 
-    &:checked + label > .box {
+    &:checked + label > .input-box {
       color: #fff;
     }
   }
@@ -124,11 +124,11 @@ footer {
 .example-image {
   .checkbox-component > input,
   .radio-component > input {
-    + label > .box:before {
+    + label > .input-box:before {
       content: '';
     }
 
-    &:checked + label > .box {
+    &:checked + label > .input-box {
       background: url('tick.png') no-repeat center center;
       background-size: 100% 100%;
     }
@@ -138,7 +138,7 @@ footer {
 .example-icon {
   .checkbox-component > input,
   .radio-component > input {
-    + label > .box:before {
+    + label > .input-box:before {
       content: '✘';
     }
   }
@@ -147,7 +147,7 @@ footer {
 .example-advanced {
   .checkbox-component > input,
   .radio-component > input {
-    + label > .box {
+    + label > .input-box {
       position: relative;
       border: 1px solid #939393;
       border-radius: 1em;
@@ -170,11 +170,11 @@ footer {
     }
 
     &:checked {
-      + label > .box {
+      + label > .input-box {
         background: #63b65d;
       }
 
-      + label > .box {
+      + label > .input-box {
         &:before {
           border-color: #498d47;
           transform: translateX(0.6em);

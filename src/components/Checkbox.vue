@@ -4,7 +4,7 @@
             opacity: 0;
             position: absolute;
 
-            + label > .box {
+            + label > .input-box {
                 display: inline-block;
                 border: 1px solid #000;
                 margin: 0;
@@ -23,11 +23,11 @@
                 }
             }
 
-            &:checked + label > .box {
+            &:checked + label > .input-box {
                 color: #000;
             }
 
-            &:focus + label > .box {
+            &:focus + label > .input-box {
                 outline-color: #73b9ff;
             }
         }
@@ -45,7 +45,7 @@
                @change="onChange"
                ref="input">
         <label :for="id">
-            <span class="box"></span>
+            <span class="input-box"></span>
             <slot></slot>
         </label>
     </div>

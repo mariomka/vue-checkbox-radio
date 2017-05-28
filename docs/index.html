@@ -95,14 +95,14 @@
         </div>
         <div class="example-code">
             <pre>
-.checkbox-component > input + label > .box,
-.radio-component > input + label > .box {
+.checkbox-component > input + label > .input-box,
+.radio-component > input + label > .input-box {
     border-color: #4d82ff;
     background: #4d82ff;
 }
 
-.checkbox-component > input:checked + label > .box,
-.radio-component > input:checked + label > .box {
+.checkbox-component > input:checked + label > .input-box,
+.radio-component > input:checked + label > .input-box {
     color: #fff;
 }
             </pre>
@@ -132,13 +132,13 @@
         </div>
         <div class="example-code">
             <pre>
-.checkbox-component > input + label > .box:before,
-.radio-component > input + label > .box:before {
+.checkbox-component > input + label > .input-box:before,
+.radio-component > input + label > .input-box:before {
     content: '';
 }
 
-.checkbox-component > input:checked + label > .box,
-.radio-component > input:checked + label > .box {
+.checkbox-component > input:checked + label > .input-box,
+.radio-component > input:checked + label > .input-box {
     background: url(tick.png) no-repeat center center;
     background-size: 100% 100%;
 }
@@ -169,8 +169,8 @@
         </div>
         <div class="example-code">
             <pre>
-.checkbox-component > input + label > .box:before,
-.radio-component > input + label > .box:before {
+.checkbox-component > input + label > .input-box:before,
+.radio-component > input + label > .input-box:before {
     content: '✘';
 }
             </pre>
@@ -200,8 +200,8 @@
         </div>
         <div class="example-code">
             <pre>
-.checkbox-component > input + label > .box,
-.radio-component > input + label > .box {
+.checkbox-component > input + label > .input-box,
+.radio-component > input + label > .input-box {
   position: relative;
   border: 1px solid #939393;
   border-radius: 1em;
@@ -210,8 +210,8 @@
   transition: background 0.2s ease-in;
 }
 
-.checkbox-component > input + label > .box:before,
-.radio-component > input + label > .box:before {
+.checkbox-component > input + label > .input-box:before,
+.radio-component > input + label > .input-box:before {
   content: '';
   position: absolute;
   top: -1px;
@@ -224,13 +224,13 @@
   transition: transform 0.3s ease-out;
 }
 
-.checkbox-component > input:checked + label > .box,
-.radio-component > input:checked + label > .box {
+.checkbox-component > input:checked + label > .input-box,
+.radio-component > input:checked + label > .input-box {
   background: #63b65d;
 }
 
-.checkbox-component > input:checked + label > .box:before,
-.radio-component > input:checked + label > .box:before {
+.checkbox-component > input:checked + label > .input-box:before,
+.radio-component > input:checked + label > .input-box:before {
   border-color: #498d47;
   transform: translateX(0.6em);
 }
