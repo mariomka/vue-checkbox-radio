@@ -96,7 +96,6 @@
 
         methods: {
             onChange(event) {
-                console.log(event.target);
                 this.$emit('change', event);
             },
         },
