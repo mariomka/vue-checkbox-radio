@@ -17,6 +17,7 @@
                 line-height: 1;
                 color: transparent;
                 background: #fff;
+                vertical-align: -5%;
                 user-select: none;
 
                 &:before {
