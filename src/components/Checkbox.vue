@@ -11,21 +11,28 @@
                 padding: 0;
                 width: 1em;
                 height: 1em;
-                font-size: 1em;
-                text-align: center;
-                line-height: 1;
-                color: transparent;
                 background: #fff;
-                vertical-align: -5%;
+                overflow: hidden;
                 user-select: none;
 
-                &:before {
-                    content: '✓';
+                > .input-box-tick {
+                    width: 100%;
+                    height: 100%;
+
+                    > path {
+                        opacity: 0;
+                        stroke: #000;
+                        stroke-width: 3.5px;
+                        stroke-dashoffset: 30;
+                        stroke-dasharray: 30;
+                        transition: stroke-dashoffset 0.15s ease-in;
+                    }
                 }
             }
 
-            &:checked + label > .input-box {
-                color: #000;
+            &:checked + label > .input-box > .input-box-tick > path {
+                opacity: 1;
+                stroke-dashoffset: 0;
             }
 
             &:focus + label > .input-box {
@@ -46,7 +53,11 @@
                @change="onChange"
                ref="input">
         <label :for="id">
-            <span class="input-box"></span>
+            <span class="input-box">
+                <svg class="input-box-tick" viewBox="0 0 24 24">
+                    <path fill="none" d="M2.2,13.7l5.9,5.6L22.6,5.2"></path>
+                </svg>
+            </span>
             <slot></slot>
         </label>
     </div>
