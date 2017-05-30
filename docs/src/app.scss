@@ -42,7 +42,7 @@ h2 {
   margin: 20px 0;
   border-bottom: solid 1px #ccc;
   font-weight: 100;
-  font-size:26px;
+  font-size: 26px;
 }
 
 h3 {
@@ -108,78 +108,112 @@ footer {
 
 // Examples
 .example-color {
-  .checkbox-component > input,
-  .radio-component > input {
-    + label > .input-box {
+  .checkbox-component,
+  .radio-component {
+    > input + label > .input-box {
       border-color: #4d82ff;
       background: #4d82ff;
-    }
 
-    &:checked + label > .input-box {
-      color: #fff;
+      > .input-box-tick > path {
+        stroke: #fff;
+      }
+
+      > .input-circle {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.example-switcher {
+  .checkbox-component,
+  .radio-component {
+    > input {
+      + label > .input-box {
+        position: relative;
+        border: 1px solid #939393;
+        border-radius: 1em;
+        width: 1.6em;
+        background: #fff;
+        transition: background 0.2s ease-in;
+        vertical-align: -15%;
+
+        > .input-box-tick,
+        > .input-circle {
+          display: none;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          border: 1px solid #939393;
+          border-radius: 50%;
+          width: 1em;
+          height: 1em;
+          background: #fff;
+          transition: transform 0.3s ease-out;
+        }
+      }
+
+      &:checked + label {
+        > .input-box {
+          background: #63b65d;
+        }
+
+        > .input-box {
+          &:before {
+            border-color: #498d47;
+            transform: translateX(0.6em);
+          }
+        }
+      }
     }
   }
 }
 
 .example-image {
-  .checkbox-component > input,
-  .radio-component > input {
-    + label > .input-box:before {
-      content: '';
-    }
-
-    &:checked + label > .input-box {
-      background: url('tick.png') no-repeat center center;
-      background-size: 100% 100%;
-    }
-  }
-}
-
-.example-icon {
-  .checkbox-component > input,
-  .radio-component > input {
-    + label > .input-box:before {
-      content: '✘';
-    }
-  }
-}
-
-.example-advanced {
-  .checkbox-component > input,
-  .radio-component > input {
-    + label > .input-box {
-      position: relative;
-      border: 1px solid #939393;
-      border-radius: 1em;
-      width: 1.6em;
-      background: #fff;
-      transition: background 0.2s ease-in;
-      vertical-align: -15%;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        border: 1px solid #939393;
-        border-radius: 50%;
-        width: 1em;
-        height: 1em;
-        background: #fff;
-        transition: transform 0.3s ease-out;
-      }
-    }
-
-    &:checked {
+  .checkbox-component,
+  .radio-component {
+    > input {
       + label > .input-box {
-        background: #63b65d;
-      }
-
-      + label > .input-box {
-        &:before {
-          border-color: #498d47;
-          transform: translateX(0.6em);
+        > .input-box-tick,
+        > .input-circle {
+          display: none;
         }
+      }
+
+      &:checked + label > .input-box {
+        background: url('tick.png') no-repeat center center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+.example-character {
+  .checkbox-component,
+  .radio-component {
+    > input {
+      + label > .input-box {
+        font-size: 1em;
+        text-align: center;
+        line-height: 1;
+        color: transparent;
+
+        > .input-box-tick,
+        > .input-box > .input-circle {
+          display: none;
+        }
+
+        &:before {
+          content: '✘';
+        }
+      }
+
+      &:checked + label > .input-box:before {
+        color: #000;
       }
     }
   }

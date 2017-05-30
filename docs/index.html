@@ -72,7 +72,7 @@
 
     <h2>Style examples</h2>
 
-    <h3>Custom colors</h3>
+    <h3>Color</h3>
     <div class="example example-color">
         <div class="example-inputs">
             <div class="input-wrapper">
@@ -97,88 +97,21 @@
             <pre>
 .checkbox-component > input + label > .input-box,
 .radio-component > input + label > .input-box {
-    border-color: #4d82ff;
-    background: #4d82ff;
+  border-color: #4d82ff;
+  background: #4d82ff;
 }
-
-.checkbox-component > input:checked + label > .input-box,
-.radio-component > input:checked + label > .input-box {
-    color: #fff;
+.checkbox-component > input + label > .input-box > .input-box-tick > path {
+  stroke: #fff;
 }
-            </pre>
-        </div>
-    </div>
-
-    <h3>Custom image</h3>
-    <div class="example example-image">
-        <div class="example-inputs">
-            <div class="input-wrapper">
-                <checkbox checked>
-                    🍕 Pizza
-                </checkbox>
-                <checkbox>
-                    🍔 Hamburger
-                </checkbox>
-            </div>
-
-            <div class="input-wrapper">
-                <radio name="robot-3" checked>
-                    I'm a robot 🤖
-                </radio>
-                <radio name="robot-3">
-                    I'm not a robot
-                </radio>
-            </div>
-        </div>
-        <div class="example-code">
-            <pre>
-.checkbox-component > input + label > .input-box:before,
-.radio-component > input + label > .input-box:before {
-    content: '';
-}
-
-.checkbox-component > input:checked + label > .input-box,
-.radio-component > input:checked + label > .input-box {
-    background: url(tick.png) no-repeat center center;
-    background-size: 100% 100%;
+.radio-component > input + label > .input-box > .input-circle {
+  background: #fff;
 }
             </pre>
         </div>
     </div>
 
-    <h3>Custom icon</h3>
-    <div class="example example-icon">
-        <div class="example-inputs">
-            <div class="input-wrapper">
-                <checkbox checked>
-                    🍕 Pizza
-                </checkbox>
-                <checkbox>
-                    🍔 Hamburger
-                </checkbox>
-            </div>
-
-            <div class="input-wrapper">
-                <radio name="robot-4" checked>
-                    I'm a robot 🤖
-                </radio>
-                <radio name="robot-4">
-                    I'm not a robot
-                </radio>
-            </div>
-        </div>
-        <div class="example-code">
-            <pre>
-.checkbox-component > input + label > .input-box:before,
-.radio-component > input + label > .input-box:before {
-    content: '✘';
-}
-            </pre>
-        </div>
-    </div>
-
-    <h3>Advanced</h3>
-    <div class="example example-advanced">
+    <h3>Switcher</h3>
+    <div class="example example-switcher">
         <div class="example-inputs">
             <div class="input-wrapper">
                 <checkbox checked>
@@ -210,7 +143,10 @@
   transition: background 0.2s ease-in;
   vertical-align: -15%;
 }
-
+.checkbox-component > input + label > .input-box > .input-box-tick,
+.radio-component > input + label > .input-box > .input-circle {
+  display: none;
+}
 .checkbox-component > input + label > .input-box:before,
 .radio-component > input + label > .input-box:before {
   content: '';
@@ -224,16 +160,96 @@
   background: #fff;
   transition: transform 0.3s ease-out;
 }
-
 .checkbox-component > input:checked + label > .input-box,
 .radio-component > input:checked + label > .input-box {
   background: #63b65d;
 }
-
 .checkbox-component > input:checked + label > .input-box:before,
 .radio-component > input:checked + label > .input-box:before {
   border-color: #498d47;
   transform: translateX(0.6em);
+}
+            </pre>
+        </div>
+    </div>
+
+    <h3>Image</h3>
+    <div class="example example-image">
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
+
+            <div class="input-wrapper">
+                <radio name="robot-3" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-3">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
+.checkbox-component > input + label > .input-box > .input-box-tick,
+.radio-component > input + label > .input-box > .input-circle {
+  display: none;
+}
+.checkbox-component > input:checked + label > .input-box,
+.radio-component > input:checked + label > .input-box {
+  background: url("tick.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+            </pre>
+        </div>
+    </div>
+
+    <h3>Character</h3>
+    <div class="example example-character">
+        <div class="example-inputs">
+            <div class="input-wrapper">
+                <checkbox checked>
+                    🍕 Pizza
+                </checkbox>
+                <checkbox>
+                    🍔 Hamburger
+                </checkbox>
+            </div>
+
+            <div class="input-wrapper">
+                <radio name="robot-4" checked>
+                    I'm a robot 🤖
+                </radio>
+                <radio name="robot-4">
+                    I'm not a robot
+                </radio>
+            </div>
+        </div>
+        <div class="example-code">
+            <pre>
+.checkbox-component > input + label > .input-box,
+.radio-component > input + label > .input-box {
+  font-size: 1em;
+  text-align: center;
+  line-height: 1;
+  color: transparent;
+}
+.checkbox-component > input + label > .input-box > .input-box-tick,
+.radio-component > input + label > .input-box > .input-box > .input-circle {
+  display: none;
+}
+.checkbox-component > input + label > .input-box:before,
+.radio-component > input + label > .input-box:before {
+  content: '✘';
+}
+.checkbox-component > input:checked + label > .input-box:before,
+.radio-component > input:checked + label > .input-box:before {
+  color: #000;
 }
             </pre>
         </div>
