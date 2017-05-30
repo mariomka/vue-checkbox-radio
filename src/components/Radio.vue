@@ -14,6 +14,7 @@
                 height: 1em;
                 background: #fff;
                 overflow: hidden;
+                vertical-align: -5%;
                 user-select: none;
 
                 > .input-circle {
