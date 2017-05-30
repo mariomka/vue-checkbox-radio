@@ -12,21 +12,27 @@
                 padding: 0;
                 width: 1em;
                 height: 1em;
-                font-size: 1em;
-                text-align: center;
-                line-height: 1;
-                color: transparent;
                 background: #fff;
-                vertical-align: -5%;
+                overflow: hidden;
                 user-select: none;
 
-                &:before {
-                    content: '✓';
+                > .input-circle {
+                    display: block;
+                    margin: 50%;
+                    width: 0%;
+                    height: 0%;
+                    background: #000;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: width 0.15s ease-in, height 0.15s ease-in, margin 0.15s ease-in;
                 }
             }
 
-            &:checked + label > .input-box {
-                color: #000;
+            &:checked + label > .input-box > .input-circle {
+                opacity: 1;
+                margin: 22%;
+                width: 56%;
+                height: 56%;
             }
 
             &:focus + label > .input-box {
@@ -47,7 +53,9 @@
                @change="onChange"
                ref="input">
         <label :for="id">
-            <span class="input-box"></span>
+            <span class="input-box">
+                <span class="input-circle"></span>
+            </span>
             <slot></slot>
         </label>
     </div>
