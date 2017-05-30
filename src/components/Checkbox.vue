@@ -36,7 +36,7 @@
             }
 
             &:focus + label > .input-box {
-                outline-color: #73b9ff;
+                box-shadow: 0 0 2px 3px rgba(115, 185, 255, 0.69);
             }
         }
     }
