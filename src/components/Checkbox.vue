@@ -23,9 +23,9 @@
                     > path {
                         opacity: 0;
                         stroke: #000;
-                        stroke-width: 3.5px;
-                        stroke-dashoffset: 30;
-                        stroke-dasharray: 30;
+                        stroke-width: 2.3px;
+                        stroke-dashoffset: 20;
+                        stroke-dasharray: 20;
                         transition: stroke-dashoffset 0.15s ease-in;
                     }
                 }
@@ -55,8 +55,8 @@
                ref="input">
         <label :for="id">
             <span class="input-box">
-                <svg class="input-box-tick" viewBox="0 0 24 24">
-                    <path fill="none" d="M2.2,13.7l5.9,5.6L22.6,5.2"></path>
+                <svg class="input-box-tick" viewBox="0 0 16 16">
+                    <path fill="none" d="M1.7,7.8l3.8,3.4l9-8.8"></path>
                 </svg>
             </span>
             <slot></slot>
