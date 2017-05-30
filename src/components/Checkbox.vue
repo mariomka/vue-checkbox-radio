@@ -7,6 +7,7 @@
             + label > .input-box {
                 display: inline-block;
                 border: 1px solid #000;
+                border-radius: 14%;
                 margin: 0;
                 padding: 0;
                 width: 1em;
