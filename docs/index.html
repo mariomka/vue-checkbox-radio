@@ -8,6 +8,8 @@
     <title>vue-checkbox-radio demo</title>
     <meta name="description" content="vue-checkbox-radio docs">
     <meta name="author" content="Mario Juárez">
+    <link rel="stylesheet" href="build/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-light.min.css">
 </head>
 
 <body>
@@ -31,14 +33,12 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
-&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;pizza&#x22; @change=&#x22;onChangeCheckbox&#x22; checked&#x3E;
+            <pre><code>&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;pizza&#x22; @change=&#x22;onChangeCheckbox&#x22; checked&#x3E;
     &#x1F355; Pizza
 &#x3C;/checkbox&#x3E;
 &#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;hamburger&#x22; @change=&#x22;onChangeCheckbox&#x22; &#x3E;
     &#x1F354; Hamburger
-&#x3C;/checkbox&#x3E;
-            </pre>
+&#x3C;/checkbox&#x3E;</code></pre>
         </div>
     </div>
 
@@ -59,14 +59,12 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
-&#x3C;radio name=&#x22;robot&#x22; value=&#x22;yes&#x22; @change=&#x22;onChangeRadio&#x22; checked&#x3E;
+            <pre><code>&#x3C;radio name=&#x22;robot&#x22; value=&#x22;yes&#x22; @change=&#x22;onChangeRadio&#x22; checked&#x3E;
     I&#x27;m a robot &#x1F916;
 &#x3C;/radio&#x3E;
 &#x3C;radio name=&#x22;robot&#x22; value=&#x22;no&#x22; @change=&#x22;onChangeRadio&#x22;&#x3E;
     I&#x27;m not a robot
-&#x3C;/radio&#x3E;
-            </pre>
+&#x3C;/radio&#x3E;</code></pre>
         </div>
     </div>
 
@@ -94,8 +92,7 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
-.checkbox-component > input + label > .input-box,
+            <pre><code>.checkbox-component > input + label > .input-box,
 .radio-component > input + label > .input-box {
   border-color: #4d82ff;
   background: #4d82ff;
@@ -105,8 +102,7 @@
 }
 .radio-component > input + label > .input-box > .input-circle {
   background: #fff;
-}
-            </pre>
+}</code></pre>
         </div>
     </div>
 
@@ -132,8 +128,7 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
-.checkbox-component > input + label > .input-box,
+            <pre><code>.checkbox-component > input + label > .input-box,
 .radio-component > input + label > .input-box {
   position: relative;
   border: 1px solid #939393;
@@ -168,8 +163,7 @@
 .radio-component > input:checked + label > .input-box:before {
   border-color: #498d47;
   transform: translateX(0.6em);
-}
-            </pre>
+}</code></pre>
         </div>
     </div>
 
@@ -195,7 +189,7 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
+            <pre><code>
 .checkbox-component > input + label > .input-box > .input-box-tick,
 .radio-component > input + label > .input-box > .input-circle {
   display: none;
@@ -205,7 +199,7 @@
   background: url("tick.png") no-repeat center center;
   background-size: 100% 100%;
 }
-            </pre>
+            </code></pre>
         </div>
     </div>
 
@@ -231,8 +225,7 @@
             </div>
         </div>
         <div class="example-code">
-            <pre>
-.checkbox-component > input + label > .input-box,
+            <pre><code>.checkbox-component > input + label > .input-box,
 .radio-component > input + label > .input-box {
   font-size: 1em;
   text-align: center;
@@ -250,8 +243,7 @@
 .checkbox-component > input:checked + label > .input-box:before,
 .radio-component > input:checked + label > .input-box:before {
   color: #000;
-}
-            </pre>
+}</code></pre>
         </div>
     </div>
 
@@ -261,5 +253,7 @@
 </div>
 
 <script src="build/app.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

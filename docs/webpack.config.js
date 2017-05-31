@@ -1,4 +1,5 @@
-const path = require('path');
+const path              = require('path'),
+      ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     context: __dirname,
@@ -25,17 +26,19 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: [
-                     'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    },
-                    'sass-loader'
-                ],
-            }
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                url: false
+                            }
+                        },
+                        'sass-loader',
+                    ]
+                }),
+            },
         ]
     },
 
@@ -45,4 +48,8 @@ module.exports = {
         },
         extensions: ['.js', '.vue'],
     },
+
+    plugins: [
+        new ExtractTextPlugin("app.css")
+    ],
 };

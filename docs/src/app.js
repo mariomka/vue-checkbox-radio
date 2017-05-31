@@ -1,3 +1,4 @@
+// Vue
 import Vue from 'vue';
 import CheckboxRadio from '../../src';
 
@@ -23,5 +24,5 @@ new Vue({
     },
 });
 
-
+// App
 require('./app.scss');
