@@ -120,7 +120,7 @@ footer {
         stroke: #fff;
       }
 
-      > .input-circle {
+      > .input-box-circle {
         background: #fff;
       }
     }
@@ -141,7 +141,7 @@ footer {
         vertical-align: -15%;
 
         > .input-box-tick,
-        > .input-circle {
+        > .input-box-circle {
           display: none;
         }
 
@@ -181,7 +181,7 @@ footer {
     > input {
       + label > .input-box {
         > .input-box-tick,
-        > .input-circle {
+        > .input-box-circle {
           display: none;
         }
       }
@@ -205,7 +205,7 @@ footer {
         color: transparent;
 
         > .input-box-tick,
-        > .input-box > .input-circle {
+        > .input-box-circle {
           display: none;
         }
 

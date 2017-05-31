@@ -17,7 +17,7 @@
                 vertical-align: -5%;
                 user-select: none;
 
-                > .input-circle {
+                > .input-box-circle {
                     display: block;
                     margin: 50%;
                     width: 0%;
@@ -29,7 +29,7 @@
                 }
             }
 
-            &:checked + label > .input-box > .input-circle {
+            &:checked + label > .input-box > .input-box-circle {
                 opacity: 1;
                 margin: 22%;
                 width: 56%;
@@ -55,7 +55,7 @@
                ref="input">
         <label :for="id">
             <span class="input-box">
-                <span class="input-circle"></span>
+                <span class="input-box-circle"></span>
             </span>
             <slot></slot>
         </label>
