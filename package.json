@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "build": "webpack -p --progress",
-    "docs": "webpack -p --progress --config docs/webpack.config.js"
+    "docs": "webpack -p --progress --config docs/webpack.config.js",
+    "docs-watch": "webpack --progress --config docs/webpack.config.js --watch"
   },
   "author": {
     "name": "Mario Juárez",
