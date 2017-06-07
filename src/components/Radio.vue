@@ -52,7 +52,7 @@
                :class="className"
                :required="required"
                @change="onChange"
-               ref="input">
+               :checked="state">
         <label :for="id">
             <span class="input-box">
                 <span class="input-box-circle"></span>
@@ -64,6 +64,11 @@
 
 <script>
     export default {
+        model: {
+            prop: 'modelValue',
+            event: 'input'
+        },
+
         props: {
             id: {
                 type: String,
@@ -77,7 +82,11 @@
             },
             value: {
                 type: String,
-                default: null,
+                default: '',
+            },
+            modelValue: {
+                type: String,
+                default: undefined,
             },
             className: {
                 type: String,
@@ -91,22 +100,41 @@
                 type: Boolean,
                 default: false,
             },
+            model: {}
+        },
+
+        computed: {
+            state () {
+                if (this.modelValue === undefined) {
+                    return this.checked;
+                }
+
+                return this.modelValue === this.value;
+            }
+        },
+
+        methods: {
+            onChange() {
+                this.toggle();
+            },
+
+            toggle() {
+                this.$emit('input', this.state ? '' : this.value);
+            }
         },
 
         watch: {
-            checked(value) {
-                this.$refs.input.checked = value;
+            checked(newValue) {
+                if (newValue !== this.state) {
+                    this.toggle();
+                }
             }
         },
 
         mounted() {
-            this.$refs.input.checked = this.checked;
-        },
-
-        methods: {
-            onChange(event) {
-                this.$emit('change', event);
-            },
+            if (this.checked && !this.state) {
+                this.toggle();
+            }
         },
     }
 </script>

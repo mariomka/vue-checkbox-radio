@@ -70,28 +70,43 @@ Vue.component('radio', Radio);
 
 ## Params
 
+### Checkbox
+
 Parameter | Type | Default
 --------- | ---- | ------
-id | `string` | (checkbox/radio)-id-(element uid)
-name | `string` | `null`
-value | `string` | `null`
+id | `string` | checkbox-id-(element uid)
 class-name | `string` | `null`
+name | `string` | `null`
+v-model | `String | Array` | `undefined`
+value | `string` | `null`
+checked | `boolean` | `false`
+required | `boolean` | `false`
+
+### Radio
+
+Parameter | Type | Default
+--------- | ---- | ------
+id | `string` | radio-id-(element uid)
+class-name | `string` | `null`
+name | `string` | `null`
+v-model | `String` | `undefined`
+value | `string` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
 
 ## Events
 
-Both components emit `change` event.
+Both components emit the `input` event to work with `v-model`.
 
 ## Full example
 
 ```html
 <checkbox
     id="input-terms"
+    class-name="terms"
     name="terms"
     value="1"
-    class-name="terms"
-    @change="someMethod"
+    v-model="model"
     checked
     required>
     I agree to the <a href="#">terms of service</a>

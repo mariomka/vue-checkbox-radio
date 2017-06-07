@@ -53,7 +53,7 @@
                :class="className"
                :required="required"
                @change="onChange"
-               ref="input">
+               :checked="state">
         <label :for="id">
             <span class="input-box">
                 <svg class="input-box-tick" viewBox="0 0 16 16">
@@ -67,6 +67,11 @@
 
 <script>
     export default {
+        model: {
+            prop: 'modelValue',
+            event: 'input'
+        },
+
         props: {
             id: {
                 type: String,
@@ -82,6 +87,10 @@
                 type: String,
                 default: null,
             },
+            modelValue: {
+                type: String | Array,
+                default: undefined,
+            },
             className: {
                 type: String,
                 default: null,
@@ -94,22 +103,59 @@
                 type: Boolean,
                 default: false,
             },
+            model: {}
+        },
+
+        computed: {
+            state () {
+                if (this.modelValue === undefined) {
+                    return this.checked;
+                }
+
+                if (Array.isArray(this.modelValue)) {
+                    return this.modelValue.indexOf(this.value) > -1;
+                }
+
+                return !!this.modelValue;
+            }
+        },
+
+        methods: {
+            onChange() {
+                this.toggle();
+            },
+
+            toggle() {
+                let value;
+
+                if (Array.isArray(this.modelValue)) {
+                    value = this.modelValue.slice(0);
+
+                    if (this.state) {
+                        value.splice(value.indexOf(this.value), 1);
+                    } else {
+                        value.push(this.value);
+                    }
+                } else {
+                    value = !this.state;
+                }
+
+                this.$emit('input', value);
+            }
         },
 
         watch: {
-            checked(value) {
-                this.$refs.input.checked = value;
+            checked(newValue) {
+                if (newValue !== this.state) {
+                    this.toggle();
+                }
             }
         },
 
         mounted() {
-            this.$refs.input.checked = this.checked;
-        },
-
-        methods: {
-            onChange(event) {
-                this.$emit('change', event);
-            },
+            if (this.checked && !this.state) {
+                this.toggle();
+            }
         },
     };
 </script>
