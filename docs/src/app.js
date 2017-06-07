@@ -9,18 +9,9 @@ new Vue({
 
     data() {
         return {
-            lastEventTimeCheckbox: '',
-            lastEventTimeRadio: '',
+            checkboxValue: [],
+            radioValue: '',
         }
-    },
-
-    methods: {
-        onChangeCheckbox() {
-            this.lastEventTimeCheckbox = new Date();
-        },
-        onChangeRadio() {
-            this.lastEventTimeRadio = new Date();
-        },
     },
 });
 

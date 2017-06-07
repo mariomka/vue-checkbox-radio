@@ -19,24 +19,25 @@
     <div class="example">
         <div class="example-inputs">
             <div class="input-wrapper">
-                <checkbox name="food[]" value="pizza" @change="onChangeCheckbox" checked>
+                <checkbox name="food[]" value="pizza" v-model="checkboxValue" checked>
                     🍕 Pizza
                 </checkbox>
-                <checkbox name="food[]" value="hamburger" @change="onChangeCheckbox" >
+                <checkbox name="food[]" value="hamburger" v-model="checkboxValue" >
                     🍔 Hamburger
                 </checkbox>
             </div>
 
-            <div class="events" v-if="lastEventTimeCheckbox">
-                <strong>Last event time:</strong><br>
-                {{ lastEventTimeCheckbox }}
+            <div class="values">
+                <p>
+                    <strong>Value:</strong> {{ checkboxValue }}
+                </p>
             </div>
         </div>
         <div class="example-code">
-            <pre><code>&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;pizza&#x22; @change=&#x22;onChangeCheckbox&#x22; checked&#x3E;
+            <pre><code>&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;pizza&#x22; v-model=&#x22;checkboxValue&#x22; checked&#x3E;
     &#x1F355; Pizza
 &#x3C;/checkbox&#x3E;
-&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;hamburger&#x22; @change=&#x22;onChangeCheckbox&#x22; &#x3E;
+&#x3C;checkbox name=&#x22;food[]&#x22; value=&#x22;hamburger&#x22; v-model=&#x22;checkboxValue&#x22;&#x3E;
     &#x1F354; Hamburger
 &#x3C;/checkbox&#x3E;</code></pre>
         </div>
@@ -45,24 +46,25 @@
     <div class="example">
         <div class="example-inputs">
             <div class="input-wrapper">
-                <radio name="robot" value="yes" @change="onChangeRadio" checked>
+                <radio name="robot" value="yes" v-model="radioValue" checked>
                     I'm a robot 🤖
                 </radio>
-                <radio name="robot" value="no" @change="onChangeRadio">
+                <radio name="robot" value="no" v-model="radioValue">
                     I'm not a robot
                 </radio>
             </div>
 
-            <div class="events" v-if="lastEventTimeRadio">
-                <strong>Last event time:</strong><br>
-                {{ lastEventTimeRadio }}
+            <div class="values">
+                <p>
+                    <strong>Value:</strong> {{ radioValue }}
+                </p>
             </div>
         </div>
         <div class="example-code">
-            <pre><code>&#x3C;radio name=&#x22;robot&#x22; value=&#x22;yes&#x22; @change=&#x22;onChangeRadio&#x22; checked&#x3E;
+            <pre><code>&#x3C;radio name=&#x22;robot&#x22; value=&#x22;yes&#x22; v-model=&#x22;radioValue&#x22; checked&#x3E;
     I&#x27;m a robot &#x1F916;
 &#x3C;/radio&#x3E;
-&#x3C;radio name=&#x22;robot&#x22; value=&#x22;no&#x22; @change=&#x22;onChangeRadio&#x22;&#x3E;
+&#x3C;radio name=&#x22;robot&#x22; value=&#x22;no&#x22; v-model=&#x22;radioValue&#x22;&#x3E;
     I&#x27;m not a robot
 &#x3C;/radio&#x3E;</code></pre>
         </div>
@@ -248,7 +250,7 @@
     </div>
 
     <footer>
-        <a href="https://github.com/mariomka/vue-checkbox-radio">Code on Github</a>
+        © <a href="https://github.com/mariomka">Mario Juárez</a> - <a href="https://github.com/mariomka/vue-checkbox-radio">Code on Github</a>
     </footer>
 </div>
 
