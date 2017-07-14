@@ -55,11 +55,13 @@
                @change="onChange"
                :checked="state">
         <label :for="id">
-            <span class="input-box">
-                <svg class="input-box-tick" viewBox="0 0 16 16">
-                    <path fill="none" d="M1.7,7.8l3.8,3.4l9-8.8"></path>
-                </svg>
-            </span>
+            <slot name="input-box">
+                <span class="input-box">
+                    <svg class="input-box-tick" viewBox="0 0 16 16">
+                        <path fill="none" d="M1.7,7.8l3.8,3.4l9-8.8"></path>
+                    </svg>
+                </span>
+            </slot>
             <slot></slot>
         </label>
     </div>

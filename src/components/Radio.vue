@@ -54,9 +54,11 @@
                @change="onChange"
                :checked="state">
         <label :for="id">
-            <span class="input-box">
-                <span class="input-box-circle"></span>
-            </span>
+            <slot name="input-box">
+                <span class="input-box">
+                    <span class="input-box-circle"></span>
+                </span>
+            </slot>
             <slot></slot>
         </label>
     </div>

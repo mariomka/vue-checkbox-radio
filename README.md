@@ -113,6 +113,19 @@ Both components emit the `input` event to work with `v-model`.
 </checkbox>
 ```
 
+## Slots
+
+Slot ``input-box`` allow overwriting ``input-box`` for specific customizations.
+
+```html
+<checkbox>
+    <span class="input-box" slot="input-box">
+        [...]
+    </span>
+    Test
+</checkbox>
+```
+
 ## License
 
 MIT © [Mario Juárez](https://github.com/mariomka)
