@@ -77,8 +77,8 @@ Parameter | Type | Default
 id | `string` | checkbox-id-(element uid)
 class-name | `string` | `null`
 name | `string` | `null`
-v-model | `string` or `array` | `undefined`
-value | `string` | `null`
+v-model | `string`, `boolean` or `array` | `undefined`
+value | `string` or `boolean` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
 
@@ -89,8 +89,8 @@ Parameter | Type | Default
 id | `string` | radio-id-(element uid)
 class-name | `string` | `null`
 name | `string` | `null`
-v-model | `string` | `undefined`
-value | `string` | `null`
+v-model | `string` or `boolean` | `undefined`
+value | `string` or `boolean` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
 

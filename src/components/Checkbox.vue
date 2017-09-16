@@ -86,11 +86,11 @@
                 default: null,
             },
             value: {
-                type: String,
+                type: [String, Boolean],
                 default: null,
             },
             modelValue: {
-                type: String | Array,
+                type: [String, Boolean, Array],
                 default: undefined,
             },
             className: {
