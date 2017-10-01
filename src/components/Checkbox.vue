@@ -86,11 +86,9 @@
                 default: null,
             },
             value: {
-                type: [String, Boolean],
                 default: null,
             },
             modelValue: {
-                type: [String, Boolean, Array],
                 default: undefined,
             },
             className: {
