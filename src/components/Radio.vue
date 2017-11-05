@@ -109,7 +109,7 @@
         },
 
         computed: {
-            state () {
+            state() {
                 if (this.modelValue === undefined) {
                     return this.checked;
                 }
