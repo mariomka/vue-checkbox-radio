@@ -51,6 +51,7 @@
                :value="value"
                :class="className"
                :required="required"
+               :disabled="disabled"
                @change="onChange"
                :checked="state">
         <label :for="id">
@@ -97,6 +98,10 @@
                 default: false,
             },
             required: {
+                type: Boolean,
+                default: false,
+            },
+            disabled: {
                 type: Boolean,
                 default: false,
             },

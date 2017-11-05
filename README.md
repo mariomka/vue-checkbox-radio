@@ -81,6 +81,7 @@ v-model | `string`, `boolean` or `array` | `undefined`
 value | `string` or `boolean` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
+disabled | `boolean` | `false`
 
 ### Radio
 
@@ -93,6 +94,7 @@ v-model | `string` or `boolean` | `undefined`
 value | `string` or `boolean` | `null`
 checked | `boolean` | `false`
 required | `boolean` | `false`
+disabled | `boolean` | `false`
 
 ## Events
 
