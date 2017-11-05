@@ -39,6 +39,10 @@
             &:focus + label > .input-box {
                 box-shadow: 0 0 2px 3px #73b9ff;
             }
+
+            &:disabled + label {
+                opacity: 0.7;
+            }
         }
     }
 </style>
